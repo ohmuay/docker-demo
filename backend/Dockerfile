@@ -1,9 +1,9 @@
 FROM node:16-alpine
 WORKDIR /app
 COPY package.json .
-RUN "yarn"
+RUN "npm"
 COPY . .
 EXPOSE 1337
-RUN "yarn build"
+RUN "npm build"
 
-CMD ["yarn","start"]
+CMD ["npm","start"]
