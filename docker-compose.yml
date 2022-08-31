@@ -27,12 +27,16 @@ services:
       - "1337:1337"
     depends_on:
       - postgres
+    env_file:
+      - env/backend.env
 
   postgres:
     image: postgres
     container_name: postgres
     volumes:
       - ./data:/var/lib/postgresql/data
+    env_file:
+      - env/postgres.env
 
 
   

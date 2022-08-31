@@ -18,15 +18,9 @@ services:
     build: 
       dockerfile: Dockerfile.dev
       context: backend/
-    env_file:
-      - env/backend.env
     volumes:
       - /app/node_modules
-      - ./backend:/app
-
-  postgres:
-    env_file:
-      - env/postgres.env
+      - ./backend:/app    
 
 
   
