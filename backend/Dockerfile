@@ -4,6 +4,6 @@ COPY package.json .
 RUN yarn
 COPY . .
 EXPOSE 1337
-RUN yarn build
+RUN NODE_ENV=production yarn build
 
-CMD ["yarn","start"]
+CMD ["NODE_ENV=production","yarn","start"]
